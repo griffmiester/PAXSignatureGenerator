@@ -275,13 +275,15 @@
     $('input:checkbox.paxselect').change(function() {
         var paxid = $(this).data('pax') + $(this).parent().text();
 
+	var year = $(this).parent().text()
+	var paxname = $(this).data('pax')
         if ($(this).is(':checked')) {
             $('#my-pax').append(
                 '<tr id="' + paxid + '">' +
                     '<td>' + paxid + '</td>' +
                     '<td>' +
-                        '<input type="hidden" name="Year[]" value="' + $(this).parent().text() + '"/>' +
-                        '<input type="hidden" name="PAX[]" value="' + $(this).data('pax') + '"/>' +
+                        '<input type="hidden" name="Year[]" value="' + year + '"/>' +
+                        '<input type="hidden" name="PAX[]" value="' + paxname + '"/>' +
                         '<select class="form-control" name="BadgeBase[]">' +
                             '<option value="ATTENDEE">Regular</option>' +
                             '<option value="ENFORCER">Enforcer</option>' +
@@ -304,7 +306,7 @@
                     '</td>' +
                     '<td>' +
                         '<div class="btn-group" data-toggle="buttons">' +
-                            '<label class="btn btn-default"><input type="checkbox" name="future[]" class="future-pax"/>Future PAX?</label>' +
+                            '<label class="btn btn-default' + (probablyFuture(year, paxname) ? ' active' : '') + '"><input type="checkbox" name="future[]" ' + (probablyFuture(year, paxname) ? 'checked=true ' : '') + '" class="future-pax"/>Future PAX?</label>' +
                         '</div>' +
                     '</td>' +
                 '</tr>');

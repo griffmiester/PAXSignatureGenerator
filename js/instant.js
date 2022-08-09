@@ -187,6 +187,22 @@ for( var obj in SORTMAGIC) {
 
 var comboatlas = Jimp.read("images/PAX_COMBO.png")
 
+// Is the PAX probably in the future?
+// This will be used for pre-marking a badge as being in the future,
+// which can still be toggled later.
+// @param year - PAX year
+// @param {string} pax - Name of PAX used here, i.e. WEST, UNPLUGGED.
+// @return {boolean} PAX is probably in the future
+function probablyFuture(year, pax) {
+  if( year in SORTMAGIC && pax in SORTMAGIC[year] ) {
+    var thisPAXDate = new Date(SORTMAGIC[year][pax])
+    var nowDate = new Date()
+    if( thisPAXDate > nowDate ) return true
+  }
+
+  return false
+}
+
 function badgeChanged() {
   var badgeform = $(this).serializeArray()
   var futureidxs = badgeform.filter(function(value) {
