@@ -71,6 +71,11 @@ const PAX_DATA = {
     year: 2017,
     order: 5,
     color: Jimp.rgbaToInt(144, 71, 153, 255)
+  },
+  "ONLINE": {
+    year: 2020,
+    order: 6,
+    color: Jimp.rgbaToInt(0, 188, 122, 255)
   }
 }
 const VERYLARGEWRAP = 1000;
@@ -159,14 +164,18 @@ var SORTMAGIC = {
   },
   "2020": {
     "SOUTH": "2020/01/19",
-    "EAST": "2020/03/01"
+    "EAST": "2020/03/01",
+    "ONLINE": "2020/09/12"
   },
   "2021": {
     "WEST": "2021/09/06",
     "UNPLUGGED": "2021/12/12"
   },
   "2022": {
-    "EAST": "2022/04/24"
+    "EAST": "2022/04/24",
+    "WEST": "2022/09/02",
+    "AUS":  "2022/10/07",
+    "UNPLUGGED": "2022/12/02"
   }
 };
 
