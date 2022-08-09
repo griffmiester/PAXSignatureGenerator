@@ -11,7 +11,14 @@ const BADGE_TYPES = {"ATTENDEE": {value: 0, name: "Attendee"},
                      "BYOC": {value: 1, name:"BYOC"},
                      "MEDIA": {value: 2, name: "Media"},
                      "OMEGANAUT": {value: 3, name: "Omeganaut"},
-                     "ENFORCER": {value: 4, name: "Enforcer"}}
+                     "ENFORCER": {value: 4, name: "Enforcer"},
+                     "CON": {value: 5, name: "Content Creator"},
+                     "VND": {value: 6, name: "Vendor"},        // Usually profssional crews
+                     "SPEAKER": {value: 7, name: "Speaker"},   // Panelist
+                     "SPG": {value: 8, name: "Special Guest"}, // Panelist
+                     "VIP": {value: 9, name: "VIP"},
+                     "STF": {value: 10, name: "Staff"}}     // TODO: Add "ALL" for All Access?
+
 const BADGE_BASE  = {"ATTENDEE": {value: 0},
                      "ENFORCER": {value: 1}}
 
@@ -25,7 +32,14 @@ const BADGE_RIBBON_DATA = {
   "BYOC": { offset: 0, recolor: false },
   "MEDIA": { offset: 1, recolor: false },
   "OMEGANAUT": { offset: 3, recolor: true }, // but only for non-future?
-  "ENFORCER": { offset: 2, recolor: false }
+  "ENFORCER": { offset: 2, recolor: false },
+  "CON": {offset: 4, recolor: false},
+  "EXH": {offset: 5, recolor: false},
+  "VND": {offset: 6, recolor: false},
+  "SPEAKER": {offset: 7, recolor: false},
+  "SPG": {offset: 8, recolor: false},
+  "VIP": {offset: 9, recolor: false},
+  "STF": {offset: 10, recolor: false}
 }
 const PAX_DATA = {
   "WEST": {
