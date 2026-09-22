@@ -195,6 +195,12 @@ var SORTMAGIC = {
     "AUS":  "2025/10/10",
     "UNPLUGGED": "2025/11/21"
   },
+    "2026": {
+    "EAST": "2026/03/26",
+    "WEST": "2026/09/04",
+    "AUS":  "2026/10/09",
+    "UNPLUGGED": "2026/12/05"
+  },
 };
 
 for( var obj in SORTMAGIC) {
